@@ -33,6 +33,8 @@ func main() {
 			DrawDisplay(cp8, window, cells, program)
 		}
 
+		glfw.PollEvents()
+		window.SwapBuffers()
 		// Store key press state
 	}
 }

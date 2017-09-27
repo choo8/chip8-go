@@ -22,7 +22,7 @@ const (
 	` + "\x00"
 
 	fragmentShaderSource = `
-		#version 410
+		#version 450
 		out vec4 frag_colour;
 		void main() {
 			frag_colour = vec4(1, 1, 1, 1.0);
@@ -64,9 +64,6 @@ func DrawDisplay(cp8 *Chip8, window *glfw.Window, cells [][]*cell, program uint3
 			}
 		}
 	}
-
-	glfw.PollEvents()
-	window.SwapBuffers()
 }
 
 func (c *cell) draw() {
